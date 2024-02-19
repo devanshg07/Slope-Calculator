@@ -8,9 +8,11 @@ public class LineCalculator {
         int pointCount = 2;  
         int option = 0;        
 
+        while(true){
+        
         double[] xPoints = getXPoints(pointCount);
         double[] yPoints = getYPoints(pointCount);
-
+        
         showOptions();
         option = scanner.nextInt();
 
@@ -31,6 +33,8 @@ public class LineCalculator {
             System.out.println(slopeEquation);
         }
     }
+    }
+
 
     public static double[] getXPoints(int pointCount){
         Scanner scanner = new Scanner(System.in);
@@ -62,6 +66,7 @@ public class LineCalculator {
         System.out.println("1. Find the slope.");
         System.out.println("2. Find the y-intercept. ");
         System.out.println("3. Find the equation in slope form. ");
+
     }
 
     public static double findSlope(double[] xPoints, double[] yPoints){
