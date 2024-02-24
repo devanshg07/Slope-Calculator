@@ -100,7 +100,11 @@ public class LineCalculator {
             return "f(x) = " + yInt;
         } else if (yInt == 0) {
             return "f(x) = " + slope + "x";
-        } else {
+        } else if (yInt < 0 ){
+
+            return "f(x) = " + slope + " - " + Math.abs(yInt);
+        }
+         else{
             return "f(x) = " + slope + "x + " + yInt;
         }
     }
